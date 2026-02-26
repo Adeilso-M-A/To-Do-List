@@ -81,6 +81,19 @@ class TaskTag(BaseModel):
         return f"{self.task.title} - {self.tag.name}"
 
 
+
+class User(BaseModel):
+    """Modelo para usuarios"""
+    nome = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+
+    class Meta:
+        ordering = ['nome']
+
+    def __str__(self):
+        return self.nome
+
+
 from django.db import models
 
 # Create your models here.

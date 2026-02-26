@@ -5,6 +5,7 @@ from core.viewsets import TagViewSet, TaskViewSet
 router = DefaultRouter()
 router.register(r'tasks', TaskViewSet, basename='task')
 router.register(r'tags', TagViewSet, basename='tag')
+router.register(r'User', TaskViewSet, basename='user')
 
 urlpatterns = [
     path('', include(router.urls)),
